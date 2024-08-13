@@ -21,9 +21,9 @@
                 
                 let scrapedData;
                 if (selector) {
-                    scrapedData = .map((i, el) => .text()).get();
+                    scrapedData = $(selector).map((i, el) => $(el).text()).get();
                 } else {
-                    scrapedData = body.text();
+                    scrapedData = $('body').text();
                 }
 
                 msg.payload = {
