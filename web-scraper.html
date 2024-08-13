@@ -1,0 +1,50 @@
+﻿<script type="text/javascript">
+    RED.nodes.registerType('web-scraper',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            url: {value:""},
+            selector: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-globe",
+        label: function() {
+            return this.name||"Web Scraper";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="web-scraper">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-globe"></i> URL</label>
+        <input type="text" id="node-input-url" placeholder="https://example.com">
+    </div>
+    <div class="form-row">
+        <label for="node-input-selector"><i class="fa fa-search"></i> CSS Selector</label>
+        <input type="text" id="node-input-selector" placeholder=".class-name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="web-scraper">
+    <p>A node that scrapes web content based on the provided URL and CSS selector.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>The input should contain a URL and optionally a CSS selector to scrape specific content.</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">object</span>
+        </dt>
+        <dd>The output contains the scraped data and the URL that was scraped.</dd>
+    </dl>
+</script>

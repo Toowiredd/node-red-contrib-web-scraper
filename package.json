@@ -1,0 +1,14 @@
+﻿{
+  "name": "node-red-contrib-web-scraper",
+  "version": "1.0.0",
+  "description": "A web scraper node for Node-RED",
+  "node-red": {
+    "nodes": {
+      "web-scraper": "web-scraper.js"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
